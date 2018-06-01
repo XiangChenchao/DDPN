@@ -17,6 +17,10 @@ We release the Pretrained model in the paper.
 | testA |         |         | 80.57%  | 70.54%  |
 | testB |         |         | 72.42%  | 55.59%  |
 
+1. Download models [here, BaiduYun](https://pan.baidu.com/s/1QiLu28UoOePCHe2W_2gNVA)
+2. Unzip the zip models file in directory './pretrained_model'.
+
+
 ## Preprocess
 1. Download Images, **Images only**
   - **flickr30k** 
@@ -33,10 +37,6 @@ We release the Pretrained model in the paper.
 
 3. Download Annotation, **we preprocess the annotations of flickr30k, referit, refcoco** which makes all kind of data to be in same format, download our processed **annotations [here, BaiduYun](https://pan.baidu.com/s/1Qd2O9Zp5OzaGqPhEENCA2A), then unzip these zip files in directory './data'**. We release the code for preprocessing annotation in directory './preprocess'.
 
-
-## Pretrained Models
-1. Download models [here, BaiduYun](https://pan.baidu.com/s/1QiLu28UoOePCHe2W_2gNVA)
-2. Unzip the zip models file in directory './pretrained_model'.
 
 ## Training
 1. Training Scratch
