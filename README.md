@@ -35,7 +35,7 @@ We release the Pretrained model in the paper.
 
 
 ## Pretrained Models
-1. Download models [BaiduYun](https://pan.baidu.com/s/1QiLu28UoOePCHe2W_2gNVA)
+1. Download models [here, BaiduYun](https://pan.baidu.com/s/1QiLu28UoOePCHe2W_2gNVA)
 2. Unzip the zip models file in directory './pretrained_model'.
 
 ## Training
