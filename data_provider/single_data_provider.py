@@ -96,6 +96,9 @@ class SingleDataProvider(DataProvider):
             self.epoch_counter = 0
             print 'mode %s has %d data'%(self.mode, self.batch_len)
 
+        if self.mode!='train' and self.epoch_counter>0:
+            return None
+
         counter = 0
         t_qid_list = []
         t_iid_list = []
