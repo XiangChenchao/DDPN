@@ -22,10 +22,10 @@ We release the Pretrained model in the paper.
   - **flickr30k** 
     - download the [Flickr30k images](https://drive.google.com/file/d/0B_PL6p-5reUAZEM4MmRQQ2VVSlk/view?usp=sharing)
     - put flickr30k images in directory './data/flickr30k/flickr30k-images/'.
-  - **referit** download the [Referit Images](https://github.com/ronghanghu/natural-language-object-retrieval/blob/master/datasets/download_referit_dataset.sh).
+  - **referit**, download the Referit Images.
     - wget -O ./datasets/ReferIt/ImageCLEF/referitdata.tar.gz http://www.eecs.berkeley.edu/~ronghang/projects/cvpr16_text_obj_retrieval/referitdata.tar.gz
     - tar -xzvf ./datasets/ReferIt/ImageCLEF/referitdata.tar.gz -C ./data/referit/ImageCLEF/
-  - **refcoco/refcoco+** download the *mscoco 2014 Images*
+  - **refcoco/refcoco+**, download the **mscoco train2014 Images**
     - [mscoco train2014](http://images.cocodataset.org/zips/train2014.zip).
     - move images of mscoco train2014 in directory './data/mscoco/image2014/train2014/'
 
