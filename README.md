@@ -26,7 +26,7 @@ We release the Pretrained model in the paper.
     - wget -O ./datasets/ReferIt/ImageCLEF/referitdata.tar.gz http://www.eecs.berkeley.edu/~ronghang/projects/cvpr16_text_obj_retrieval/referitdata.tar.gz
     - tar -xzvf ./datasets/ReferIt/ImageCLEF/referitdata.tar.gz -C ./data/referit/ImageCLEF/
   - **refcoco/refcoco+** download the *mscoco 2014 Images*
-    - mscoco [train2014](http://images.cocodataset.org/zips/train2014.zip).
+    - [mscoco train2014](http://images.cocodataset.org/zips/train2014.zip).
     - put mscoco train2014/val2014/test2015 image directory in directory './data/mscoco/image2014/'
 
 2. Extract image features, we use [**bottom-up-attention**](https://github.com/peteanderson80/bottom-up-attention) as our image feature extractor. For a 3x800x800 image, we generate a 100x2048 tensor as input feature.
