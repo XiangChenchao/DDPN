@@ -10,12 +10,12 @@ This project is the implementation of the paper **Rethnking Diversified and Disc
 
 We release the Pretrained model in the paper. 
 
-|   Datasets    | Flickr30k | Referit | Refcoco  | Refcoco+ | Refcoco+ |
-|:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
-| val   | xx%[BaiduYun]   |xx% [BaiduYun]()   | xx% [BaiduYun]()| xx% | xx% |
-| test  | xx%[BaiduYun]   |xx% [BaiduYun]()   | xx% [BaiduYun]()| xx% | xx% |
-| testA  | xx%[BaiduYun]   |xx% [BaiduYun]()   | xx% [BaiduYun]()| xx% | xx% |
-| testB  | xx%[BaiduYun]   |xx% [BaiduYun]()   | xx% [BaiduYun]()| xx% | xx% |
+|   Datasets    | Flickr30k | Referit | Refcoco  | Refcoco+ |
+|:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
+| val   | 72.65%[BaiduYun]   |63.63% [BaiduYun]()   | 77.18% [BaiduYun]()| 65.12% |
+| test  | 73.34%[BaiduYun]   |63.50% [BaiduYun]()   | 76.70% [BaiduYun]()| 63.65% |
+| testA  |    |   | 80.57% [BaiduYun]()| 70.54% |
+| testB  |    |   | 72.42% [BaiduYun]()| 55.59% |
 
 ## Preprocess
 1. Download Images, **Images only**
