@@ -230,9 +230,10 @@ def test_net(test_split, net, batchsize, use_kld=cfg.USE_KLD, use_reg=cfg.USE_RE
             dataloader = dp
     else:
         dataloader = dp
-    dataloader = iter(dataloader)
     count = 0
-    for k, data in enumerate(dataloader):
+    for data in dataloader:
+        if data is None:
+            break
         data = map(np.array, data)
         my_complete_data = functools.partial(complete_data, batchsize=batchsize)
         gt_boxes, qvec, cvec, img_feat, bbox, img_shape, spt_feat, query_label, query_label_mask, \
