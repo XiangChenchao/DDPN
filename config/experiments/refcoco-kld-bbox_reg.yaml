@@ -1,0 +1,14 @@
+IMDB_NAME: 'refcoco'
+BATCHSIZE: 64
+TRAIN:
+    STEPSIZE: 20000
+    SNAPSHOT_ITERS: 5000
+    VALIDATE_INTERVAL: 5000
+    MAX_ITERS: 40000
+# thread number (require pytorch for multi thread)
+NTHREADS: 16
+USE_KLD: True
+USE_REG: True
+PROJ_NAME: 'genome_kld_reg'
+FEAT_DIR: './data/mscoco/features/bottom-up-feats/train2014'
+IMAGE_DIR: './data/mscoco/image2014/train2014'
