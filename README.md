@@ -17,8 +17,8 @@ We release the Pretrained model in the paper.
 | testA |         |         | 80.57%  | 70.54%  |
 | testB |         |         | 72.42%  | 55.59%  |
 
-1. Download models [here, BaiduYun](https://pan.baidu.com/s/1QiLu28UoOePCHe2W_2gNVA)
-2. Unzip the zip models file in directory './pretrained_model'.
+1. Download pretrained models [BaiduYun](https://pan.baidu.com/s/1QiLu28UoOePCHe2W_2gNVA)
+2. Unzip the zip model files in directory './pretrained_model'.
 
 
 ## Preprocess
