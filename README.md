@@ -61,3 +61,16 @@ We release the Pretrained model in the paper.
     - python test_net.py --gpu_id 0 --test_split test --batchsize 64 --test_net pretrained_model/refcoco/test.prototxt --pretrained_model pretrained_model/refcoco/final.caffemodel --cfg config/experiments/refcoco-kld-bbox_reg.yaml
   - refcoco+
     - python test_net.py --gpu_id 0 --test_split test --batchsize 64 --test_net pretrained_model/refcoco+/test.prototxt --pretrained_model pretrained_model/refcoco+/final.caffemodel --cfg config/experiments/refcoco+-kld-bbox_reg.yaml
+
+
+## Citation
+If you find this implementation helpful, please consider citing:
+
+```
+@article{,
+  title={Rethnking Diversified and Discriminative Proposal Generation for Visual Grounding},
+  author={Yu, Zhou and Yu, Jun and Xiang, Chenchao and Zhao, Zhou and Tian, Qi and Tao, Dacheng},
+  journal={International Joint Conference on Artificial Intelligence (IJCAI)},
+  year={2018}
+}
+```
