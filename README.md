@@ -28,8 +28,8 @@ We release the Pretrained model in the paper.
     - move flickr30k images to directory './data/flickr30k/flickr30k-images/'.
   - **referit**, download the Referit Images.
     ```
-    - wget -O ./data/referit/ImageCLEF/referitdata.tar.gz http://www.eecs.berkeley.edu/~ronghang/projects/cvpr16_text_obj_retrieval/referitdata.tar.gz
-    - tar -xzvf ./data/referit/ImageCLEF/referitdata.tar.gz -C ./data/referit/ImageCLEF/
+    wget -O ./data/referit/ImageCLEF/referitdata.tar.gz http://www.eecs.berkeley.edu/~ronghang/projects/cvpr16_text_obj_retrieval/referitdata.tar.gz
+    tar -xzvf ./data/referit/ImageCLEF/referitdata.tar.gz -C ./data/referit/ImageCLEF/
     ```
   - **refcoco/refcoco+**, download the **mscoco train2014 Images**
     - [mscoco train2014](http://images.cocodataset.org/zips/train2014.zip).
@@ -41,27 +41,52 @@ We release the Pretrained model in the paper.
 
 
 ## Training
-1. Training Scratch
   - flickr30k
-    - python train_net.py --gpu_id 0 --train_split train --val_split val --cfg config/experiments/flickr30k-kld-bbox_reg.yaml
+    ```
+    python train_net.py --gpu_id 0 --train_split train --val_split val --cfg config/experiments/flickr30k-kld-bbox_reg.yaml
+    ```
   - referit
-    - python train_net.py --gpu_id 0 --train_split train --val_split val --cfg config/experiments/referit-kld-bbox_reg.yaml
+    ```
+    python train_net.py --gpu_id 0 --train_split train --val_split val --cfg config/experiments/referit-kld-bbox_reg.yaml
+    ```
   - refcoco
-    - python train_net.py --gpu_id 0 --train_split train --val_split val --cfg config/experiments/refcoco-kld-bbox_reg.yaml
+    ```
+    python train_net.py --gpu_id 0 --train_split train --val_split val --cfg config/experiments/refcoco-kld-bbox_reg.yaml
+    ```
   - refcoco+
-    - python train_net.py --gpu_id 0 --train_split train --val_split val --cfg config/experiments/refcoco+-kld-bbox_reg.yaml
+    ```
+    python train_net.py --gpu_id 0 --train_split train --val_split val --cfg config/experiments/refcoco+-kld-bbox_reg.yaml
+    ```
 2. Output model will be put in directory './models'
 3. Validation log output will be writen in directory './log'
 
 ## Testing
-1. Testing Scratch
   - flickr30k
-    - python test_net.py --gpu_id 0 --test_split test --batchsize 64 --test_net pretrained_model/flickr30k/test.prototxt --pretrained_model pretrained_model/flickr30k/final.caffemodel --cfg config/experiments/flickr30k-kld-bbox_reg.yaml
+    ```
+    python test_net.py --gpu_id 0 --test_split test --batchsize 64 --test_net pretrained_model/flickr30k/test.prototxt --pretrained_model pretrained_model/flickr30k/final.caffemodel --cfg config/experiments/flickr30k-kld-bbox_reg.yaml
+    ```
   - referit
-    - python test_net.py --gpu_id 0 --test_split test --batchsize 64 --test_net pretrained_model/referit/test.prototxt --pretrained_model pretrained_model/referit/final.caffemodel --cfg config/experiments/referit-kld-bbox_reg.yaml
+    ```
+    python test_net.py --gpu_id 0 --test_split test --batchsize 64 --test_net pretrained_model/referit/test.prototxt --pretrained_model pretrained_model/referit/final.caffemodel --cfg config/experiments/referit-kld-bbox_reg.yaml
+    ```
   - refcoco
-    - python test_net.py --gpu_id 0 --test_split test --batchsize 64 --test_net pretrained_model/refcoco/test.prototxt --pretrained_model pretrained_model/refcoco/final.caffemodel --cfg config/experiments/refcoco-kld-bbox_reg.yaml
+    ```
+    python test_net.py --gpu_id 0 --test_split test --batchsize 64 --test_net pretrained_model/refcoco/test.prototxt --pretrained_model pretrained_model/refcoco/final.caffemodel --cfg config/experiments/refcoco-kld-bbox_reg.yaml
+    ```
   - refcoco+
-    - python test_net.py --gpu_id 0 --test_split test --batchsize 64 --test_net pretrained_model/refcoco+/test.prototxt --pretrained_model pretrained_model/refcoco+/final.caffemodel --cfg config/experiments/refcoco+-kld-bbox_reg.yaml
+    ```
+    python test_net.py --gpu_id 0 --test_split test --batchsize 64 --test_net pretrained_model/refcoco+/test.prototxt --pretrained_model pretrained_model/refcoco+/final.caffemodel --cfg config/experiments/refcoco+-kld-bbox_reg.yaml
+    ```
 
+
+## citatation
+If the codes are helpful for your research, please cite
+```
+@article{yu2018rethining,
+  title={Rethnking Diversified and Discriminative Proposal Generation for Visual Grounding},
+  author={Yu, Zhou and Yu, Jun and Xiang, Chenchao, Zhao, Zhou, Tian, Qi and Tao, Dacheng},
+  journal={International Joint Conference on Artificial Intelligence (IJCAI)},
+  year={2018}
+}
+```
 
