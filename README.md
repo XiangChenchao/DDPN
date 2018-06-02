@@ -27,13 +27,15 @@ We release the Pretrained model in the paper.
     - download the [Flickr30k images](https://drive.google.com/file/d/0B_PL6p-5reUAZEM4MmRQQ2VVSlk/view?usp=sharing)
     - move flickr30k images to directory './data/flickr30k/flickr30k-images/'.
   - **referit**, download the Referit Images.
+    '''
     - wget -O ./data/referit/ImageCLEF/referitdata.tar.gz http://www.eecs.berkeley.edu/~ronghang/projects/cvpr16_text_obj_retrieval/referitdata.tar.gz
     - tar -xzvf ./data/referit/ImageCLEF/referitdata.tar.gz -C ./data/referit/ImageCLEF/
+    '''
   - **refcoco/refcoco+**, download the **mscoco train2014 Images**
     - [mscoco train2014](http://images.cocodataset.org/zips/train2014.zip).
     - move images of mscoco train2014 to directory './data/mscoco/image2014/train2014/'
 
-2. Extract image features, we use [**bottom-up-attention**](https://github.com/peteanderson80/bottom-up-attention) as our image feature extractor. For a 3x800x800 image, we extract a 100x2048 feature as model input.
+2. Extract image features, we use [**bottom-up-attention**](https://github.com/yuzcccc/bottom-up-attention) as our image feature extractor. For a 3x800x800 image, we extract a 100x2048 feature as model input.
 
 3. Download Annotation, **we preprocess the annotations of flickr30k, referit, refcoco** which makes all kind of data to be in same format, download our processed **annotations [here, BaiduYun](https://pan.baidu.com/s/1Qd2O9Zp5OzaGqPhEENCA2A), then unzip these zip files in directory './data'**. We release the code for preprocessing annotation in directory './preprocess'.
 
