@@ -6,7 +6,7 @@ This project is the implementation of the paper **Rethnking Diversified and Disc
 ![Figure 1: The DDPN network architecture for visual grounding.](https://github.com/XiangChenchao/DDPN/raw/master/images/DDPN.jpg)
 <center>Figure 1: The DDPN network architecture for visual grounding.</center>
 ```
-<img src="https://github.com/XiangChenchao/DDPN/raw/master/images/DDPN.jpg" alt="Figure 1: The DDPN network architecture for visual grounding." style="max-width:60%;"/>
+<img src="https://github.com/XiangChenchao/DDPN/raw/master/images/DDPN.jpg" alt="Figure 1: The DDPN network architecture for visual grounding." width="60%"/>
 
 ## Requirements
 - Python version 2.7
