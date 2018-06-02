@@ -83,7 +83,7 @@ We release the pretrained models in the paper.
     ```
 
 
-## citatation
+## Citation
 If the codes are helpful for your research, please cite
 ```
 @article{yu2018rethining,
