@@ -14,7 +14,7 @@ This project is the implementation of the paper **Rethnking Diversified and Disc
 
 We release the pretrained models in the paper. 
 
-|   Datasets    | Flickr30k | Referit | Refcoco  | Refcoco+ |
+|   Datasets    | Flickr30k-Entities | Referit-Game | Refcoco  | Refcoco+ |
 |:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
 | val   | 72.65   | 63.63%  | 77.18%  | 65.12%  |
 | test  | 73.34   | 63.50%  | 76.70%  | 63.65%  |
