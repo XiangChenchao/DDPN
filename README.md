@@ -4,11 +4,11 @@ This project is the implementation of the paper **Rethnking Diversified and Disc
 
 ## Requirements
 - Python version 2.7
-- Pytorch 0.3 (optional, required for multi-threads)
+- Pytorch 0.3 (optional, required for multi-threads data loading)
 
 ## Pretrained Models
 
-We release the Pretrained model in the paper. 
+We release the pretrained models in the paper. 
 
 |   Datasets    | Flickr30k | Referit | Refcoco  | Refcoco+ |
 |:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
@@ -18,7 +18,7 @@ We release the Pretrained model in the paper.
 | testB |         |         | 72.42%  | 55.59%  |
 
 1. Download pretrained models [BaiduYun](https://pan.baidu.com/s/1QiLu28UoOePCHe2W_2gNVA)
-2. Unzip the zip model files in directory './pretrained_model'.
+2. Unzip the model files in directory './pretrained_model'.
 
 
 ## Preprocess
