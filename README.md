@@ -1,4 +1,4 @@
-# visualgrounding
+# DDPN
 
 This project is the implementation of the paper **Rethnking Diversified and Discriminative Proposal Generation for Visual Grounding**.The DDPN network architecture for visual grounding is illustrated in Figure 1.
 
