@@ -1,6 +1,10 @@
 # visualgrounding
 
-This project is the implementation of the paper **Rethnking Diversified and Discriminative Proposal Generation for Visual Grounding**.
+This project is the implementation of the paper **Rethnking Diversified and Discriminative Proposal Generation for Visual Grounding**.The DDPN network architecture for visual grounding is illustrated in Figure 1.
+
+![Figure 1: The DDPN network architecture for visual grounding.]()
+<center>Figure 1: The DDPN network architecture for visual grounding.</center>
+
 
 ## Requirements
 - Python version 2.7
