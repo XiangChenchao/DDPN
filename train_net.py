@@ -72,6 +72,7 @@ if __name__ == '__main__':
     # pprint.pprint(cfg)
     if opts.cfg_file is not None:
         cfg_from_file(opts.cfg_file)
+    cfg.BATCHSIZE = opts.batchsize
     # cfg.IMDB_NAME = opts.imdb_name
     print_cfg()
     
