@@ -68,18 +68,7 @@ def net(split, vocab_size, opts):
 
 
 def proc_img(n, img_feat_layer, spt_feat_layer):
-    # n.img_feat_resh = L.Reshape(img_feat_layer,reshape_param=dict(shape=dict(dim=[-1,cfg.BOTTOMUP_FEAT_DIM])))
-    # n.spt_feat_resh = L.Reshape(spt_feat_layer,reshape_param=dict(shape=dict(dim=[-1,cfg.SPT_FEAT_DIM])))
     n.v_spt = L.Concat(img_feat_layer, spt_feat_layer, concat_param={'axis': 2})
-    # if cfg.FUSE_TYPE == 'mfb' or cfg.FUSE_TYPE == 'mfh':
-    #     n.v_emb1 = L.InnerProduct(n.v_spt, num_output=2048, 
-    #                                    weight_filler=dict(type='xavier'))
-    #     n.v_l2norm = L.L2Normalize(n.v_emb1)
-    #     n.v_emb2 = L.InnerProduct(n.v_l2norm, num_output=cfg.JOINT_EMB_SIZE, 
-    #                                    weight_filler=dict(type='xavier'))
-    #     out_layer = n.v_emb2
-    # elif cfg.FUSE_TYPE == 'concat':
-    #     out_layer = n.v_spt
     out_layer = n.v_spt
     return out_layer
 
