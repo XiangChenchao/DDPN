@@ -8,6 +8,14 @@ This project is the implementation of the paper **Rethinking Diversified and Dis
 
 ## Requirements
 - Python version 2.7
+- easydict
+  ```
+    pip install easydict
+  ```
+- cv2 (3.4.0.12)
+  ```
+    pip install opencv-python
+  ```
 - Pytorch 0.3 (optional, required for multi-threads data loading)
 
 ## Pretrained Models
