@@ -47,14 +47,16 @@ We release the pretrained models in the paper.
     - [mscoco train2014](http://images.cocodataset.org/zips/train2014.zip).
     - move images of mscoco train2014 to directory './data/mscoco/image2014/train2014/'
 
-2. Extract image features, we use [**bottom-up-attention**](https://github.com/yuzcccc/bottom-up-attention) as our image feature extractor. For a 3x800x800 image, we extract a 100x2048 feature as network input. More detail in Section **Extract features**(https://github.com/yuzcccc/bottom-up-attention#extract-features) of the bottom-up-attention. However, there are something different, we set **100,100 num_bbox** not **10,100 num_bbox**.
+2. Extract image features, we use [**bottom-up-attention**](https://github.com/yuzcccc/bottom-up-attention) as our image feature extractor. For a 3x800x800 image, we extract a 100x2048 feature as network input. More detail in Section **Extract features**(https://github.com/yuzcccc/bottom-up-attention#extract-features) of the bottom-up-attention. However, there are something different, we set **100,100 num_bbox** not **10,100 num_bbox**. for flickr30k and referit we output the images features in directory 'data/flickr30k(or referit)/features/bottom-up-feats/' by default. And for refcoco/refcoco+ we output the images features in 'data/mscoco/features/bottom-up-feats/train2014'.
   ```
   ./tools/extract_feat.py --gpu 0,1,2,3 --cfg experiments/cfgs/faster_rcnn_end2end_resnet_vg.yml --def models/vg/ResNet-101/faster_rcnn_end2end/test.prototxt --net data/faster_rcnn_models/resnet101_faster_rcnn_final.caffemodel --img_dir /path/to/images/ --out_dir /path/to/outfeat/ --num_bbox 100,100 --feat_name pool5_flat
   ```
 
 3. Download Annotation, **we preprocess the annotations of flickr30k-entities, referit, refcoco, refcoco+** which makes all kind of data to be in same format, download our processed **annotations [here, BaiduYun](https://pan.baidu.com/s/1Qd2O9Zp5OzaGqPhEENCA2A), then unzip these zip files in directory './data'**. We will release the code for preprocessing annotation in directory './preprocess'.
 
-4. Caffe
+4. set data loader threads and images features dir and images dir in yaml config files in directory './config/experiments/'.
+
+5. Caffe
   ```
   cd ./caffe
   make all -j32
