@@ -11,6 +11,3 @@ this_dir = osp.dirname(__file__)
 caffe_path = osp.join(this_dir, 'caffe', 'python')
 add_path(caffe_path)
 
-# Add lib to PYTHONPATH
-lib_path = osp.join(this_dir, '..', 'lib')
-add_path(lib_path)
