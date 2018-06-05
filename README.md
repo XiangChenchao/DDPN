@@ -12,7 +12,7 @@ This project is the implementation of the paper **Rethinking Diversified and Dis
   ```
     pip install easydict
   ```
-- cv2 (3.4.0.12)
+- cv2
   ```
     pip install opencv-python
   ```
