@@ -54,7 +54,7 @@ We release the pretrained models in the paper.
 
 3. Download Annotation, **we preprocess the annotations of flickr30k-entities, referit, refcoco, refcoco+** which makes all kind of data to be in same format, download our processed **annotations [here, BaiduYun](https://pan.baidu.com/s/1Qd2O9Zp5OzaGqPhEENCA2A), then unzip these zip files in directory './data'**. We will release the code for preprocessing annotation in directory './preprocess'.
 
-4. Set data loader threads and images features dir and images dir in yaml config files in directory './config/experiments/'.
+4. Config Set, set data loader threads and images features dir and images dir in yaml config files in directory './config/experiments/'.
 
 5. Caffe
   ```
