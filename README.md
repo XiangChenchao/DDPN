@@ -107,7 +107,7 @@ We release the pretrained models in the paper.
 If the codes are helpful for your research, please cite
 ```
 @article{yu2018rethining,
-  title={Rethnking Diversified and Discriminative Proposal Generation for Visual Grounding},
+  title={Rethinking Diversified and Discriminative Proposal Generation for Visual Grounding},
   author={Yu, Zhou and Yu, Jun and Xiang, Chenchao, Zhao, Zhou, Tian, Qi and Tao, Dacheng},
   journal={International Joint Conference on Artificial Intelligence (IJCAI)},
   year={2018}
