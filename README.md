@@ -14,7 +14,7 @@ This project is the implementation of the paper **Rethinking Diversified and Dis
 
 ## Pretrained Models
 
-We release the trained models, which achieve slightly higher results than shown in the paper. 
+We release the trained models on four datasets, which achieve slightly better results than that shown in the paper. 
 
 |   Datasets    | Flickr30k-Entities | Referit | Refcoco  | Refcoco+ |
 |:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
