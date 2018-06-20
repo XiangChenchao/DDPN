@@ -52,7 +52,7 @@ We release the trained models on four datasets, which achieve slightly better re
   ```
   ./tools/extract_feat.py --gpu 0,1,2,3 --cfg experiments/cfgs/faster_rcnn_end2end_resnet_vg.yml --def models/vg/ResNet-101/faster_rcnn_end2end/test.prototxt --net /path/to/caffemodel --img_dir /path/to/images/ --out_dir /path/to/outfeat/ --num_bbox 100,100 --feat_name pool5_flat
   ```
-  For flickr30k or referit we output the images features in directory 'data/\[flickr30k, referit\]/features/bottom-up-feats/' by default. And for refcoco/refcoco+ we output the images features in 'data/mscoco/features/bottom-up-feats/train2014'.
+  - For flickr30k or referit we output the images features in directory 'data/\[flickr30k, referit\]/features/bottom-up-feats/' by default. And for refcoco/refcoco+ we output the images features in 'data/mscoco/features/bottom-up-feats/train2014'.
 
 3. Download Annotation files, **we preprocess the annotations of flickr30k-entities, referit, refcoco, refcoco+** which makes all kind of data to be in same format, download our processed **annotations [here, BaiduYun](https://pan.baidu.com/s/1Qd2O9Zp5OzaGqPhEENCA2A), then unzip these zip files in directory './data'**. We will release the code for preprocessing annotation in directory './preprocess'.
 
