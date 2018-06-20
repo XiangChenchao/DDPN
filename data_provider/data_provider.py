@@ -48,7 +48,7 @@ class DataProvider(object):
         self.batchsize = batchsize
         self.image_dir = cfg.IMAGE_DIR
         self.feat_dir = cfg.FEAT_DIR
-        self.dict_dir = osp.join(cfg.DATA_DIR, cfg.IMDB_NAME, 'query_dict')
+        self.dict_dir = cfg.QUERY_DIR #osp.join(cfg.DATA_DIR, cfg.IMDB_NAME, 'query_dict')
 
         self.anno = self.load_data(data_splits)
         self.qdic = Dictionary(self.dict_dir)
@@ -74,7 +74,8 @@ class DataProvider(object):
     def load_data(self, data_splits):
         anno = {}
         for data_split in data_splits:
-            data_path = osp.join(cfg.DATA_DIR, cfg.IMDB_NAME, 'format_%s.pkl'%str(data_split))
+            #data_path = osp.join(cfg.DATA_DIR, cfg.IMDB_NAME, 'format_%s.pkl'%str(data_split))
+            data_path = cfg.ANNO_PATH%str(data_split)
             t_anno = load(data_path)
             anno.update(t_anno)
         return anno
