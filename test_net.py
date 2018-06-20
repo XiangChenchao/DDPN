@@ -52,7 +52,7 @@ if __name__ == '__main__':
     print_cfg()
 
     if opts.test_net is None:
-        qdic_dir = osp.join(cfg.DATA_DIR, cfg.IMDB_NAME, 'query_dict')
+        qdic_dir = cfg.QUERY_DIR #osp.join(cfg.DATA_DIR, cfg.IMDB_NAME, 'query_dict')
         qdic = Dictionary(qdic_dir)
         qdic.load()
         vocab_size = qdic.size()
