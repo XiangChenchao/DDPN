@@ -1,26 +1,20 @@
 # DDPN
 
-This project is the implementation of the paper **Rethinking Diversified and Discriminative Proposal Generation for Visual Grounding**.The DDPN network architecture for visual grounding is illustrated in Figure 1.
+This project is the implementation of the paper **Rethinking Diversified and Discriminative Proposal Generation for Visual Grounding**.The network architecture with DDPN for our visual grounding model is illustrated in Figure 1.
 
-<img src="https://github.com/XiangChenchao/DDPN/raw/master/images/DDPN.jpg" alt="Figure 1: The DDPN network architecture for visual grounding." width="60%"/>
-<center>Figure 1: The DDPN network architecture for visual grounding.</center>
+<img src="https://github.com/XiangChenchao/DDPN/raw/master/images/DDPN.jpg" alt="Figure 1: The model architecture for our visual grounding model." width="60%"/>
+<center>Figure 1: The model network architecture for our visual grounding model.</center>
 
 
 ## Requirements
 - Python version 2.7
-- easydict
-  ```
-    pip install easydict
-  ```
+- easydict 
 - cv2
-  ```
-    pip install opencv-python
-  ```
-- Pytorch 0.3 (optional, required for multi-threads data loading)
+- Pytorch 0.3 (optional, used for speed-up multi-threads data loading)
 
 ## Pretrained Models
 
-We release the pretrained models in the paper. 
+We release the trained models, which achieve slightly higher results than shown in the paper. 
 
 |   Datasets    | Flickr30k-Entities | Referit | Refcoco  | Refcoco+ |
 |:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
@@ -34,6 +28,13 @@ We release the pretrained models in the paper.
 
 
 ## Preprocess
+0. Caffe
+  ```
+  cd ./caffe
+  make all -j32
+  make pycaffe
+  ```
+
 1. Download Images, **Images only**
   - **flickr30k-entities** 
     - download the [Flickr30k-Entities images](https://drive.google.com/file/d/0B_PL6p-5reUAZEM4MmRQQ2VVSlk/view?usp=sharing)
@@ -47,21 +48,15 @@ We release the pretrained models in the paper.
     - [mscoco train2014](http://images.cocodataset.org/zips/train2014.zip).
     - move images of mscoco train2014 to directory './data/mscoco/image2014/train2014/'
 
-2. Extract image features(https://github.com/yuzcccc/bottom-up-attention). For a 3x800x800 image, we extract a 100x2048 feature as network input. More detail in Section **Extract features**(https://github.com/yuzcccc/bottom-up-attention#extract-features) of the bottom-up-attention. However, there are something different, we set **100,100 num_bbox** not **10,100 num_bbox**. For flickr30k or referit we output the images features in directory 'data/\[flickr30k, referit\]/features/bottom-up-feats/' by default. And for refcoco/refcoco+ we output the images features in 'data/mscoco/features/bottom-up-feats/train2014'.
+2. Extract [DDPN image features](https://github.com/yuzcccc/bottom-up-attention#extract-features). For a 3xhxw image, we extract the 2048-D visual feature and 4-D spatial feature (post-processed to 5-D) as the input feature for our model. The script we use is as follows. Note that we use **--num_bbox 100,100** to extract a fix number of proposals (K=100) for each image. 
   ```
-  ./tools/extract_feat.py --gpu 0,1,2,3 --cfg experiments/cfgs/faster_rcnn_end2end_resnet_vg.yml --def models/vg/ResNet-101/faster_rcnn_end2end/test.prototxt --net data/faster_rcnn_models/resnet101_faster_rcnn_final.caffemodel --img_dir /path/to/images/ --out_dir /path/to/outfeat/ --num_bbox 100,100 --feat_name pool5_flat
+  ./tools/extract_feat.py --gpu 0,1,2,3 --cfg experiments/cfgs/faster_rcnn_end2end_resnet_vg.yml --def models/vg/ResNet-101/faster_rcnn_end2end/test.prototxt --net /path/to/caffemodel --img_dir /path/to/images/ --out_dir /path/to/outfeat/ --num_bbox 100,100 --feat_name pool5_flat
   ```
+For flickr30k or referit we output the images features in directory 'data/\[flickr30k, referit\]/features/bottom-up-feats/' by default. And for refcoco/refcoco+ we output the images features in 'data/mscoco/features/bottom-up-feats/train2014'.
 
-3. Download Annotation, **we preprocess the annotations of flickr30k-entities, referit, refcoco, refcoco+** which makes all kind of data to be in same format, download our processed **annotations [here, BaiduYun](https://pan.baidu.com/s/1Qd2O9Zp5OzaGqPhEENCA2A), then unzip these zip files in directory './data'**. We will release the code for preprocessing annotation in directory './preprocess'.
+3. Download Annotation files, **we preprocess the annotations of flickr30k-entities, referit, refcoco, refcoco+** which makes all kind of data to be in same format, download our processed **annotations [here, BaiduYun](https://pan.baidu.com/s/1Qd2O9Zp5OzaGqPhEENCA2A), then unzip these zip files in directory './data'**. We will release the code for preprocessing annotation in directory './preprocess'.
 
-4. Config Set, set data loader threads and images features dir and images dir in yaml config files in directory './config/experiments/'.
-
-5. Caffe
-  ```
-  cd ./caffe
-  make all -j32
-  make pycaffe
-  ```
+4. Modify the paths in the config file to adapt to your own environment, set data loader threads and images features dir and images dir in yaml config files in directory './config/experiments/'.
 
 
 ## Training
