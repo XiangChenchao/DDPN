@@ -28,14 +28,14 @@ We release the trained models on four datasets, which achieve slightly better re
 
 
 ## Preprocess
-0. Caffe
+- Caffe
   ```
   cd ./caffe
   make all -j32
   make pycaffe
   ```
 
--  Download Images, **Images only**
+- Download Images, **Images only**
   - **flickr30k-entities** 
     - download the [Flickr30k-Entities images](https://drive.google.com/file/d/0B_PL6p-5reUAZEM4MmRQQ2VVSlk/view?usp=sharing)
     - move flickr30k-entities images to directory './data/flickr30k/flickr30k-images/'.
