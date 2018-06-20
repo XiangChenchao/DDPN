@@ -10,5 +10,7 @@ NTHREADS: 16
 USE_KLD: True
 USE_REG: True
 PROJ_NAME: 'genome_kld_reg'
+QUERY_DIR: './data/refcoco/query_dict'
+ANNO_PATH: './data/refcoco/format_%s.pkl'
 FEAT_DIR: './data/mscoco/features/bottom-up-feats/train2014'
 IMAGE_DIR: './data/mscoco/image2014/train2014'
