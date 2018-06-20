@@ -28,14 +28,14 @@ We release the trained models on four datasets, which achieve slightly better re
 
 
 ## Preprocess
-- 1. Caffe
+- Caffe
   ```
   cd ./caffe
   make all -j32
   make pycaffe
   ```
 
-- 2. Download Images, **Images only**
+- Download Images, **Images only**
   - **flickr30k-entities** 
     - download the [Flickr30k-Entities images](https://drive.google.com/file/d/0B_PL6p-5reUAZEM4MmRQQ2VVSlk/view?usp=sharing)
     - move flickr30k-entities images to directory './data/flickr30k/flickr30k-images/'.
@@ -48,15 +48,15 @@ We release the trained models on four datasets, which achieve slightly better re
     - [mscoco train2014](http://images.cocodataset.org/zips/train2014.zip).
     - move images of mscoco train2014 to directory './data/mscoco/image2014/train2014/'
 
-- 3. Extract [DDPN image features](https://github.com/yuzcccc/bottom-up-attention#extract-features). For a 3xhxw image, we extract the 2048-D visual feature and 4-D spatial feature (post-processed to 5-D) as the input feature for our model. The script we use is as follows. Note that we use **--num_bbox 100,100** to extract a fix number of proposals (K=100) for each image. 
+- Extract [DDPN image features](https://github.com/yuzcccc/bottom-up-attention#extract-features). For a 3xhxw image, we extract the 2048-D visual feature and 4-D spatial feature (post-processed to 5-D) as the input feature for our model. The script we use is as follows. Note that we use **--num_bbox 100,100** to extract a fix number of proposals (K=100) for each image. 
   ```
   ./tools/extract_feat.py --gpu 0,1,2,3 --cfg experiments/cfgs/faster_rcnn_end2end_resnet_vg.yml --def models/vg/ResNet-101/faster_rcnn_end2end/test.prototxt --net /path/to/caffemodel --img_dir /path/to/images/ --out_dir /path/to/outfeat/ --num_bbox 100,100 --feat_name pool5_flat
   ```
   - For flickr30k or referit we output the images features in directory 'data/\[flickr30k, referit\]/features/bottom-up-feats/' by default. And for refcoco/refcoco+ we output the images features in 'data/mscoco/features/bottom-up-feats/train2014'.
 
-- 4. Download Annotation files, **we preprocess the annotations of flickr30k-entities, referit, refcoco, refcoco+** which makes all kind of data to be in same format, download our processed **annotations [here, BaiduYun](https://pan.baidu.com/s/1Qd2O9Zp5OzaGqPhEENCA2A), then unzip these zip files in directory './data'**. We will release the code for preprocessing annotation in directory './preprocess'.
+- Download Annotation files, **we preprocess the annotations of flickr30k-entities, referit, refcoco, refcoco+** which makes all kind of data to be in same format, download our processed **annotations [here, BaiduYun](https://pan.baidu.com/s/1Qd2O9Zp5OzaGqPhEENCA2A), then unzip these zip files in directory './data'**. We will release the code for preprocessing annotation in directory './preprocess'.
 
-- 5. Modify the paths in the config file to adapt to your own environment, set data loader threads and images features dir and images dir in yaml config files in directory './config/experiments/'.
+- Modify the paths in the config file to adapt to your own environment, set data loader threads and images features dir and images dir in yaml config files in directory './config/experiments/'.
 
 
 ## Training
