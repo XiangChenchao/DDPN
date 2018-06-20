@@ -93,7 +93,7 @@ if __name__ == '__main__':
     with open(solver_path, 'w') as f:
         f.write(str(get_solver(opts)))
     print 'initialize train prototxt'
-    qdic_dir = osp.join(cfg.DATA_DIR, cfg.IMDB_NAME, 'query_dict')
+    qdic_dir = cfg.QUERY_DIR  #osp.join(cfg.DATA_DIR, cfg.IMDB_NAME, 'query_dict')
     qdic = Dictionary(qdic_dir)
     qdic.load()
     vocab_size = qdic.size()
