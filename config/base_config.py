@@ -98,6 +98,8 @@ __C.SPT_FEAT_DIM = 5
 
 __C.FEAT_DIR = osp.join(__C.DATA_DIR, 'mscoco/features/fst-res101-feats/train2014')
 __C.IMAGE_DIR = osp.join(__C.DATA_DIR, 'mscoco/image2014/train2014')
+__C.QUERY_DIR = osp.join(__C.DATA_DIR, 'query_dict')
+__C.ANNO_PATH = osp.join(__C.DATA_DIR, 'format_%s.pkl')
 
 # Model directory
 # VGG16, res101
