@@ -1,6 +1,6 @@
 import _init_path
 
-from test import test_net
+from test_engine import test_net
 from config.base_config import cfg, print_cfg, get_models_dir, cfg_from_file
 import caffe
 from networks import models
