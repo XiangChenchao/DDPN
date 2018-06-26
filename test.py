@@ -12,7 +12,6 @@ from utils.cython_bbox import bbox_overlaps
 from utils.dictionary import Dictionary
 from utils.data_utils import complete_data
 import os, sys, json
-import torch
 import functools
 # import matplotlib.pyplot as plt
 
