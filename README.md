@@ -10,7 +10,7 @@ This project is the implementation of the paper **Rethinking Diversified and Dis
 - Python version 2.7
 - easydict 
 - cv2
-- Pytorch 0.3 (optional, used for speed-up multi-threads data loading)
+- Pytorch 0.3 (optional, used for speed-up multi-threads data loading, recommend)
 
 ## Pretrained Models
 
