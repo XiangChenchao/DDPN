@@ -103,7 +103,7 @@ If the codes are helpful for your research, please cite
 ```
 @article{yu2018rethining,
   title={Rethinking Diversified and Discriminative Proposal Generation for Visual Grounding},
-  author={Yu, Zhou and Yu, Jun and Xiang, Chenchao, Zhao, Zhou, Tian, Qi and Tao, Dacheng},
+  author={Yu, Zhou and Yu, Jun and Xiang, Chenchao and Zhao, Zhou and Tian, Qi and Tao, Dacheng},
   journal={International Joint Conference on Artificial Intelligence (IJCAI)},
   year={2018}
 }
