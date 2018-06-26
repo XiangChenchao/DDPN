@@ -8,7 +8,7 @@ import os.path as osp
 
 from caffe.proto import caffe_pb2
 import google.protobuf as pb2
-from test import exec_validation
+from test_engine import exec_validation
 from utils.logger import Logger
 
 iter_reg = re.compile(r'(\d+)')
