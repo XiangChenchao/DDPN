@@ -1,3 +1,4 @@
+import _init_path
 from train import train_net
 from networks import models
 from config.base_config import cfg, print_cfg, get_models_dir, get_solver_path, cfg_from_file
