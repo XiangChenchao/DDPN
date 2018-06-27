@@ -18,12 +18,12 @@ We release the trained models on four datasets, which achieve slightly better re
 
 |   Datasets    | Flickr30k-Entities | Referit | Refcoco  | Refcoco+ |
 |:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
-| val   | 72.65   | 63.63%  | 77.18%  | 65.12%  |
-| test  | 73.34   | 63.50%  | 76.70%  | 63.65%  |
-| testA |         |         | 80.57%  | 70.54%  |
-| testB |         |         | 72.42%  | 55.59%  |
+| val   | 72.78%   | 63.77%  | 76.61%  | 64.34%  |
+| test  | 73.45%   | 63.27%  | 76.23%  | 64.01%  |
+| testA |         |         | 79.99%  | 71.24%  |
+| testB |         |         | 72.11%  | 55.55%  |
 
-1. Download pretrained models [BaiduYun](https://pan.baidu.com/s/1QiLu28UoOePCHe2W_2gNVA)
+1. Download pretrained models [BaiduYun](https://pan.baidu.com/s/1g126BRd_tJ40cFsDQDreRg)
 2. Unzip the model files in directory './pretrained_model'.
 
 
